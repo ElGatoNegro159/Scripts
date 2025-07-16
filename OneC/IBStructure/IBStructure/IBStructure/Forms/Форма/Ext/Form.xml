@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗакрыть" id="1">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаВывестиСтруктуруХранения" id="115">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВывестиСтруктуруХранения</CommandName>
+				<ExtendedTooltip name="ФормаВывестиСтруктуруХраненияРасширеннаяПодсказка" id="116"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="3">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="4"/>
+			<ChildItems>
+				<UsualGroup name="Таблицы" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблицы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблицы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ТаблицыРасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<Table name="ТаблицаСтруктураБД" id="7">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ТаблицаСтруктураБД</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаСтруктураБДКонтекстноеМеню" id="8"/>
+							<AutoCommandBar name="ТаблицаСтруктураБДКоманднаяПанель" id="9"/>
+							<ExtendedTooltip name="ТаблицаСтруктураБДРасширеннаяПодсказка" id="10"/>
+							<SearchStringAddition name="ТаблицаСтруктураБДСтрокаПоиска" id="11">
+								<AdditionSource>
+									<Item>ТаблицаСтруктураБД</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаСтруктураБДСтрокаПоискаКонтекстноеМеню" id="12"/>
+								<ExtendedTooltip name="ТаблицаСтруктураБДСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаСтруктураБДСостояниеПросмотра" id="14">
+								<AdditionSource>
+									<Item>ТаблицаСтруктураБД</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаСтруктураБДСостояниеПросмотраКонтекстноеМеню" id="15"/>
+								<ExtendedTooltip name="ТаблицаСтруктураБДСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаСтруктураБДУправлениеПоиском" id="17">
+								<AdditionSource>
+									<Item>ТаблицаСтруктураБД</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаСтруктураБДУправлениеПоискомКонтекстноеМеню" id="18"/>
+								<ExtendedTooltip name="ТаблицаСтруктураБДУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ТаблицаСтруктураБДИмяТаблицы" id="20">
+									<DataPath>ТаблицаСтруктураБД.ИмяТаблицы</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТаблицаСтруктураБДИмяТаблицыКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ТаблицаСтруктураБДИмяТаблицыРасширеннаяПодсказка" id="22"/>
+								</InputField>
+								<InputField name="ТаблицаСтруктураБДИмяТаблицыХранения" id="23">
+									<DataPath>ТаблицаСтруктураБД.ИмяТаблицыХранения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТаблицаСтруктураБДИмяТаблицыХраненияКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ТаблицаСтруктураБДИмяТаблицыХраненияРасширеннаяПодсказка" id="25"/>
+								</InputField>
+								<InputField name="ТаблицаСтруктураБДМетаданные" id="29">
+									<DataPath>ТаблицаСтруктураБД.Метаданные</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТаблицаСтруктураБДМетаданныеКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="ТаблицаСтруктураБДМетаданныеРасширеннаяПодсказка" id="31"/>
+								</InputField>
+								<InputField name="ТаблицаСтруктураБДНазначение" id="32">
+									<DataPath>ТаблицаСтруктураБД.Назначение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТаблицаСтруктураБДНазначениеКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ТаблицаСтруктураБДНазначениеРасширеннаяПодсказка" id="34"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Поля" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поля</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поля</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПоляРасширеннаяПодсказка" id="39"/>
+					<ChildItems>
+						<Table name="ТаблицаСтруктураБДПоля" id="40">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Items.ТаблицаСтруктураБД.CurrentData.Поля</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаСтруктураБДПоляКонтекстноеМеню" id="41"/>
+							<AutoCommandBar name="ТаблицаСтруктураБДПоляКоманднаяПанель" id="42"/>
+							<ExtendedTooltip name="ТаблицаСтруктураБДПоляРасширеннаяПодсказка" id="43"/>
+							<SearchStringAddition name="ТаблицаСтруктураБДПоляСтрокаПоиска" id="44">
+								<AdditionSource>
+									<Item>ТаблицаСтруктураБДПоля</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаСтруктураБДПоляСтрокаПоискаКонтекстноеМеню" id="45"/>
+								<ExtendedTooltip name="ТаблицаСтруктураБДПоляСтрокаПоискаРасширеннаяПодсказка" id="46"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаСтруктураБДПоляСостояниеПросмотра" id="47">
+								<AdditionSource>
+									<Item>ТаблицаСтруктураБДПоля</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаСтруктураБДПоляСостояниеПросмотраКонтекстноеМеню" id="48"/>
+								<ExtendedTooltip name="ТаблицаСтруктураБДПоляСостояниеПросмотраРасширеннаяПодсказка" id="49"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаСтруктураБДПоляУправлениеПоиском" id="50">
+								<AdditionSource>
+									<Item>ТаблицаСтруктураБДПоля</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаСтруктураБДПоляУправлениеПоискомКонтекстноеМеню" id="51"/>
+								<ExtendedTooltip name="ТаблицаСтруктураБДПоляУправлениеПоискомРасширеннаяПодсказка" id="52"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ТаблицаСтруктураБДПоляИмяПоля" id="53">
+									<DataPath>Items.ТаблицаСтруктураБД.CurrentData.Поля.ИмяПоля</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТаблицаСтруктураБДПоляИмяПоляКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="ТаблицаСтруктураБДПоляИмяПоляРасширеннаяПодсказка" id="55"/>
+								</InputField>
+								<InputField name="ТаблицаСтруктураБДПоляИмяПоляХранения" id="56">
+									<DataPath>Items.ТаблицаСтруктураБД.CurrentData.Поля.ИмяПоляХранения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТаблицаСтруктураБДПоляИмяПоляХраненияКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="ТаблицаСтруктураБДПоляИмяПоляХраненияРасширеннаяПодсказка" id="58"/>
+								</InputField>
+								<InputField name="ТаблицаСтруктураБДПоляМетаданные" id="59">
+									<DataPath>Items.ТаблицаСтруктураБД.CurrentData.Поля.Метаданные</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТаблицаСтруктураБДПоляМетаданныеКонтекстноеМеню" id="60"/>
+									<ExtendedTooltip name="ТаблицаСтруктураБДПоляМетаданныеРасширеннаяПодсказка" id="61"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="62">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="63"/>
+			<ChildItems>
+				<UsualGroup name="Индексы" id="64">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индексы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индексы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ИндексыРасширеннаяПодсказка" id="65"/>
+					<ChildItems>
+						<Table name="ТаблицаСтруктураБДИндексы" id="66">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Items.ТаблицаСтруктураБД.CurrentData.Индексы</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаСтруктураБДИндексыКонтекстноеМеню" id="67"/>
+							<AutoCommandBar name="ТаблицаСтруктураБДИндексыКоманднаяПанель" id="68"/>
+							<ExtendedTooltip name="ТаблицаСтруктураБДИндексыРасширеннаяПодсказка" id="69"/>
+							<SearchStringAddition name="ТаблицаСтруктураБДИндексыСтрокаПоиска" id="70">
+								<AdditionSource>
+									<Item>ТаблицаСтруктураБДИндексы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаСтруктураБДИндексыСтрокаПоискаКонтекстноеМеню" id="71"/>
+								<ExtendedTooltip name="ТаблицаСтруктураБДИндексыСтрокаПоискаРасширеннаяПодсказка" id="72"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаСтруктураБДИндексыСостояниеПросмотра" id="73">
+								<AdditionSource>
+									<Item>ТаблицаСтруктураБДИндексы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаСтруктураБДИндексыСостояниеПросмотраКонтекстноеМеню" id="74"/>
+								<ExtendedTooltip name="ТаблицаСтруктураБДИндексыСостояниеПросмотраРасширеннаяПодсказка" id="75"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаСтруктураБДИндексыУправлениеПоиском" id="76">
+								<AdditionSource>
+									<Item>ТаблицаСтруктураБДИндексы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаСтруктураБДИндексыУправлениеПоискомКонтекстноеМеню" id="77"/>
+								<ExtendedTooltip name="ТаблицаСтруктураБДИндексыУправлениеПоискомРасширеннаяПодсказка" id="78"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ТаблицаСтруктураБДИндексыИмяИндексаХранения" id="79">
+									<DataPath>Items.ТаблицаСтруктураБД.CurrentData.Индексы.ИмяИндексаХранения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТаблицаСтруктураБДИндексыИмяИндексаХраненияКонтекстноеМеню" id="80"/>
+									<ExtendedTooltip name="ТаблицаСтруктураБДИндексыИмяИндексаХраненияРасширеннаяПодсказка" id="81"/>
+								</InputField>
+								<InputField name="ТаблицаСтруктураБДИндексыМетаданные" id="85">
+									<DataPath>Items.ТаблицаСтруктураБД.CurrentData.Индексы.Метаданные</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТаблицаСтруктураБДИндексыМетаданныеКонтекстноеМеню" id="86"/>
+									<ExtendedTooltip name="ТаблицаСтруктураБДИндексыМетаданныеРасширеннаяПодсказка" id="87"/>
+								</InputField>
+								<InputField name="ТаблицаСтруктураБДИндексыНазначение" id="88">
+									<DataPath>Items.ТаблицаСтруктураБД.CurrentData.Индексы.Назначение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТаблицаСтруктураБДИндексыНазначениеКонтекстноеМеню" id="89"/>
+									<ExtendedTooltip name="ТаблицаСтруктураБДИндексыНазначениеРасширеннаяПодсказка" id="90"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ПоляИндексов" id="91">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поля индексов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поля индексов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПоляИндексовРасширеннаяПодсказка" id="92"/>
+					<ChildItems>
+						<Table name="ТаблицаСтруктураБДИндексыПоля" id="93">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Items.ТаблицаСтруктураБДИндексы.CurrentData.Поля</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаСтруктураБДИндексыПоляКонтекстноеМеню" id="94"/>
+							<AutoCommandBar name="ТаблицаСтруктураБДИндексыПоляКоманднаяПанель" id="95"/>
+							<ExtendedTooltip name="ТаблицаСтруктураБДИндексыПоляРасширеннаяПодсказка" id="96"/>
+							<SearchStringAddition name="ТаблицаСтруктураБДИндексыПоляСтрокаПоиска" id="97">
+								<AdditionSource>
+									<Item>ТаблицаСтруктураБДИндексыПоля</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаСтруктураБДИндексыПоляСтрокаПоискаКонтекстноеМеню" id="98"/>
+								<ExtendedTooltip name="ТаблицаСтруктураБДИндексыПоляСтрокаПоискаРасширеннаяПодсказка" id="99"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаСтруктураБДИндексыПоляСостояниеПросмотра" id="100">
+								<AdditionSource>
+									<Item>ТаблицаСтруктураБДИндексыПоля</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаСтруктураБДИндексыПоляСостояниеПросмотраКонтекстноеМеню" id="101"/>
+								<ExtendedTooltip name="ТаблицаСтруктураБДИндексыПоляСостояниеПросмотраРасширеннаяПодсказка" id="102"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаСтруктураБДИндексыПоляУправлениеПоиском" id="103">
+								<AdditionSource>
+									<Item>ТаблицаСтруктураБДИндексыПоля</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаСтруктураБДИндексыПоляУправлениеПоискомКонтекстноеМеню" id="104"/>
+								<ExtendedTooltip name="ТаблицаСтруктураБДИндексыПоляУправлениеПоискомРасширеннаяПодсказка" id="105"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ТаблицаСтруктураБДИндексыПоляИмяПоля" id="106">
+									<DataPath>Items.ТаблицаСтруктураБДИндексы.CurrentData.Поля.ИмяПоля</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТаблицаСтруктураБДИндексыПоляИмяПоляКонтекстноеМеню" id="107"/>
+									<ExtendedTooltip name="ТаблицаСтруктураБДИндексыПоляИмяПоляРасширеннаяПодсказка" id="108"/>
+								</InputField>
+								<InputField name="ТаблицаСтруктураБДИндексыПоляИмяПоляХранения" id="109">
+									<DataPath>Items.ТаблицаСтруктураБДИндексы.CurrentData.Поля.ИмяПоляХранения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТаблицаСтруктураБДИндексыПоляИмяПоляХраненияКонтекстноеМеню" id="110"/>
+									<ExtendedTooltip name="ТаблицаСтруктураБДИндексыПоляИмяПоляХраненияРасширеннаяПодсказка" id="111"/>
+								</InputField>
+								<InputField name="ТаблицаСтруктураБДИндексыПоляМетаданные" id="112">
+									<DataPath>Items.ТаблицаСтруктураБДИндексы.CurrentData.Поля.Метаданные</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТаблицаСтруктураБДИндексыПоляМетаданныеКонтекстноеМеню" id="113"/>
+									<ExtendedTooltip name="ТаблицаСтруктураБДИндексыПоляМетаданныеРасширеннаяПодсказка" id="114"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.СтруктураТаблицИБ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТаблицаСтруктураБД" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица структура БД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИмяТаблицы" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя таблицы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяТаблицыХранения" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя таблицы хранения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Индексы" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индексы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:ValueTable</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Метаданные" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Метаданные</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Назначение" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Назначение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Поля" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поля</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:ValueTable</v8:Type>
+					</Type>
+				</Column>
+				<AdditionalColumns table="ТаблицаСтруктураБД.Индексы">
+					<Column name="ИмяИндексаХранения" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Имя индекса хранения</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="Поля" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Поля</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>v8:ValueTable</v8:Type>
+						</Type>
+					</Column>
+					<Column name="Метаданные" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Метаданные</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="Назначение" id="4">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Назначение</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="ТаблицаСтруктураБД.Индексы.Поля">
+					<Column name="ИмяПоля" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Имя поля</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ИмяПоляХранения" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Имя поля хранения</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="Метаданные" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Метаданные</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="ТаблицаСтруктураБД.Поля">
+					<Column name="ИмяПоля" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Имя поля</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ИмяПоляХранения" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Имя поля хранения</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="Метаданные" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Метаданные</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВывестиСтруктуруХранения" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вывести структуру хранения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вывести структуру хранения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Report</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВывестиСтруктуруХранения</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

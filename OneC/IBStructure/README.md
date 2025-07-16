@@ -1,0 +1,1 @@
+За основу взята обработка с Infostart: https://infostart.ru/1c/articles/1754719/
