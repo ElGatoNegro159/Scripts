@@ -14,6 +14,11 @@
 				<CommandName>Form.Command.ВывестиСтруктуруХранения</CommandName>
 				<ExtendedTooltip name="ФормаВывестиСтруктуруХраненияРасширеннаяПодсказка" id="116"/>
 			</Button>
+			<Button name="ФормаСформироватьСкриптОчисткиДанных" id="117">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СформироватьСкриптОчисткиДанных</CommandName>
+				<ExtendedTooltip name="ФормаСформироватьСкриптОчисткиДанныхРасширеннаяПодсказка" id="118"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -618,6 +623,26 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ВывестиСтруктуруХранения</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СформироватьСкриптОчисткиДанных" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать скрипт очистки данных</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать скрипт очистки данных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СформироватьСкриптОчисткиДанных</Action>
 			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
